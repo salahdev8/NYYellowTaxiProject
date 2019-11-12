@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/usr/lib/hadoop/client-0.20/hadoop-common-2.0.0-cdh4.2.1.jar" sourcepath="/home/training/src/hadoop-common-project/hadoop-common/src/main/java">
+		<attributes>
+			<attribute name="javadoc_location" value="http://archive.cloudera.com/cdh4/cdh/4/hadoop/api"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/usr/lib/hadoop/lib/native"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/usr/lib/hadoop/client-0.20/hadoop-core-2.0.0-mr1-cdh4.2.1.jar" sourcepath="/home/training/src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java">
+		<attributes>
+			<attribute name="javadoc_location" value="http://archive.cloudera.com/cdh4/cdh/4/hadoop/api"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
