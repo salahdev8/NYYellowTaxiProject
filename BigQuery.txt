@@ -1,0 +1,7 @@
+#The most active pick up location:
+
+
+select pul_location_id, count(pul_location_id) As location_count from `bigdata-1016680.yellowtaxi.taxitrip_tab`
+Group By  pul_location_id
+Order By  location_count desc
+limit 1;
