@@ -1,0 +1,4 @@
+INSERT OVERWRITE DIRECTORY 'gs://yellow-taxi-salah/taxi-data/output'
+SELECT id, count(id) 
+FROM taxidata 
+GROUP by id;

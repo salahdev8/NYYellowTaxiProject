@@ -1,0 +1,4 @@
+CREATE EXTERNAL TABLE taxidata
+(id INT, pickup STRING, dropff STRING, pasng INT, trip_d INT, rate INT, store STRING, PUL INT, DOL INT, pay INT, fare STRING, extr STRING, tax STRING, tip STRING, toll STRING, impr STRING, total STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+LOCATION 'gs://yellow-taxi-salah/taxi-data/';
