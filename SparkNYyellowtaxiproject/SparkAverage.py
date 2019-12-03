@@ -24,9 +24,14 @@ if __name__ == "__main__":
 
         d = b - a
 
-        duration = d.seconds / 60
+        duration = float(d.seconds) / 60
         amountint = float(amount)
-        averagearning = amountint / duration
+        if duration !=0:
+            averagearning = amountint / duration
+        else:
+            averagearning = 1
+
+
 
         return averagearning
 
@@ -34,24 +39,41 @@ if __name__ == "__main__":
     def pickupmoment(pickup):
 
         pickupdate = datetime.datetime.strptime(pickup, "%Y-%m-%d %H:%M:%S")
-
         pickuphour = pickupdate.hour
         pickuphourplus = pickupdate.hour + 1
         result = ""
-        result += pickupdate.strftime("%A") + "[" + str(pickuphour) + "," + str(pickuphourplus) + "]"
-
+        result += pickupdate.strftime("%A") + "[" + str(pickuphour) + ":" + str(pickuphourplus) + "]"
         return result
+
+    def toCSVLine(data):
+        return ','.join(str(d) for d in data)
 
 
     sc = SparkContext()
     logfile = sys.argv[1]
-    first = sc.textFile(logfile) \
-        .map(lambda line: line.split(',')) \
+    #tags = sc.textFile(logfile)
+    #tagsheader = tags.first()
+    #header = sc.parallelize([tagsheader])
+    #tagsdata = tags.subtract(header)
+
+
+    #data = sc.textFile(logfile)
+    #header = sc.parallelize([data.first()])
+
+    #header = data.take(1)[0]
+    #rows = data.filter(lambda line: line != header)
+
+    first = sc.textFile(logfile).map(lambda line: line.split(',')) \
         .map(lambda fields: (pickupmoment(fields[1]), pickupAverage(fields[1], fields[2], fields[16]))) \
-        .mapValues(lambda value: (value, 1)).reduceByKey(lambda x, y: (x[0] + y[0], x[1] + y[1])).mapValues(
-        lambda res: res[0] / res[1])
+        .mapValues(lambda value: (value, 1)).reduceByKey(lambda x, y: (x[0] + y[0], x[1] + y[1])).mapValues(lambda res: res[0] / res[1])
 
     for ele in first.collect():
-        print ele
+        out = str(ele)
+        out1 = out.replace('(', '')
+        out2 = out1.replace('\'', '')
+        outfinal = out2.replace(')', '')
+        print outfinal
+
+
 
     sc.stop()
