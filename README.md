@@ -1,5 +1,4 @@
-# NYC Yellow Taxi Trip Fare and Location Analysis Using Big Data
-
+## NYC Yellow Taxi Trip Fare and Location Analysis Using Big Data
 
 
 **Abstract**
@@ -9,11 +8,14 @@ Big data is not a new concept. However, with the immense evolution in the metrop
 
 
 
-Problem:
+**Problem:**
 
 NYC Yellow Taxicab business has been decreasing lately, and many taxi drivers has  switched to other companies. Some of the factors are:
-   *Yellow Taxicab earning average is decreasing 
-   *Competition of Companies like UBER
-   *Lack of real time  analysis to yellow taxi trips
-   *The wrong choice and estimation of the best time and location
+
+   - Yellow Taxicab earning average is decreasing 
+   - Competition of Companies like UBER
+   - Lack of real time  analysis to yellow taxi trips
+   - The wrong choice and estimation of the best time and location
+
+
 
