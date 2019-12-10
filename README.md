@@ -32,6 +32,127 @@ NYC Yellow Taxicab business has been decreasing lately, and many taxi drivers ha
 - Run the job on EMR using S3 dataset, application and output locations.
 - In case job cannot go from running to completed status we check logs file to errors. 
 
+
+**Target Data**
+
+![alt text](images/data-screen.PNG)
+
+
+
+**Uploading Data**
+
 ![alt text](images/ec2S3.png)
+
+
+
+**Map function**
+
+![alt text](images/map_1.png)
+
+
+
+**Reduce function and Output**
+
+![alt text](images/reduce.png)
+
+
+
+**Mapreduce Result**
+
+![alt text](images/MRscreen.PNG)
+
+
+
+
+**BigQuery**
+
+![alt text](images/bigQuery.png)
+
+
+
+**Bigquery result on Athena**
+
+![alt text](images/bigqueryscreen.PNG)
+
+
+
+**Hive**
+
+![alt text](images/Hivescreen.PNG)
+
+
+
+
+**Spark**
+
+![alt text](images/spark.png)
+
+
+
+**Spark table in Athena** 
+
+![alt text](images/sparkscreen.PNG)
+
+
+
+
+
+**AWS steps**
+
+![alt text](images/operation.png)
+
+
+**Evaluation**
+
+In this project we are evaluating the performance of both spark and MapReduce in solving problem I of hourly earning average per trip and problem 3 of  real time analysis of trip average fares per hour . We assume the following result
+
+
+![alt text](images/Capture.PNG)
+
+
+
+
+
+**Visualization Mapreduce**
+
+![alt text](images/MRmonday1.PNG)
+
+
+
+
+**Visualization  spark ouput**
+
+![alt text](images/MRmonday2.PNG)
+
+
+
+
+
+**Visualization  of Hive **
+
+![alt text](images/hive.PNG)
+
+
+
+
+
+**Visualization  of Bigquery**
+
+![alt text](images/bigqueryy.PNG)
+
+
+
+
+**Future work**
+
+Kibana is an open source data visualization plugin for Elasticsearch. 
+
+
+![alt text](images/kibana.PNG)
+
+
+
+
+
 
 
