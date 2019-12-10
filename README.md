@@ -31,5 +31,6 @@ NYC Yellow Taxicab business has been decreasing lately, and many taxi drivers ha
 - Run the job on EMR using S3 dataset, application and output locations.
 - In case job cannot go from running to completed status we check logs file to errors. 
 
+![alt text](https://raw.githubusercontent.com/salahdev8/NYYellowTaxiProject/ec2S3.png)
 
 
