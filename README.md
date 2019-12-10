@@ -17,5 +17,19 @@ NYC Yellow Taxicab business has been decreasing lately, and many taxi drivers ha
    - Lack of real time  analysis to yellow taxi trips
    - The wrong choice and estimation of the best time and location
 
+**System setup**
+
+- Amazon simple storage S3 and EC2 for loading our dataset from the website to s3.
+- Amazon Elastic MapReduce (EMR) with Hadoop and its ecosystem already installed and configured … still we need to link it to S3 and - choose number of instances.
+- BigQuery service in google cloud we will need it to query on it for the active areas problem. 
+
+
+**EMR in AWS implementing MapReduce** 
+
+- Create a simple Java Project in eclipse that has the Map, Reduce and the driver class.
+- Export the project in a Jar, upload it to S3.
+- Run the job on EMR using S3 dataset, application and output locations.
+- In case job cannot go from running to completed status we check logs file to errors. 
+
 
 
