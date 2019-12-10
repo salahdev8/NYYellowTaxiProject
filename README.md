@@ -66,7 +66,7 @@ NYC Yellow Taxicab business has been decreasing lately, and many taxi drivers ha
 
 **BigQuery**
 
-![alt text](images/bigQuery.png)
+![alt text](images/bigQuery1.png)
 
 
 
